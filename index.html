@@ -26,7 +26,7 @@
         <!-- Header -->
         <div class="row">
             <div class="col-md-12">
-                <div class="jumbotron jumbotron-fluid">
+                <div class="jumbotron">
                     <div class="container">
                         <h1 class="display-4">Travel Inspiration</h1>
                         <p class="lead">Make the best out of your next trip!</p>
@@ -37,21 +37,17 @@
        
         
         <!-- Input for travel location and submit button -->
-        <div class="row">
-            <div class="col-md-12">
-                <form class="form-inline">
-                    <div class="form-group mb-2">
-                        <label for="staticEmail2" class="sr-only">Email</label>
-                        <input type="text" readonly class="form-control-plaintext" id="staticEmail2" value="Enter Your Destination">
-                    </div>
-                    <div class="form-group mx-sm-3 mb-2">
-                        <label for="inputPassword2" class="sr-only">Password</label>
-                        <input type="password" class="form-control" id="inputPassword2" placeholder="City, State, Country">
-                    </div>
-                    <button type="submit" class="btn btn-primary mb-2">Search</button>
-                </form>
+        <div class="row search-form">
+                <div class="col-md-12">
+                    <form class="form-inline mt-2 mb-2" id="search-term">
+                        <span class="mr-3 font-weight-bold">Enter Your Destination</span>
+                        <input type="text" id="query" placeholder="City, State, Country" class="mr-1">
+                        <input type="submit" class="submit btn btn-primary" value="Search">
+                    </form>
+                </div>
             </div>
         </div>
+        
 
         <!-- The map display -->
         <div class="row">
@@ -75,7 +71,10 @@
 
             <!-- YouTube videos -->
             <div class="row">
-                <div class="col-md-12">
+                <div class ="col-md-12 mt-3" id="player">
+                    
+                </div>
+                <div class="col-md-12" id="search-results">
                     
     
                 </div>
@@ -90,6 +89,6 @@
     </div>
     
 
-<script src="./assets/javascript/app.js"></script>
+    <script src="./assets/javascript/app.js"></script>
 </body>
 </html>

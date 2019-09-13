@@ -25,8 +25,10 @@ function showResults(results) {
     $.each(entries, function (index, value) {
         var title = value.snippet.title;
         var thumbnail = value.snippet.thumbnails.default.url;
-        html += '<p>' + title + '</p>';
-        html += '<img src="' + thumbnail + '">';
+        var vidId = value.id.videoId
+
+        html += "<p>" + title + "</p>";
+        html += "<a href='https://www.youtube.com/watch?v=" + vidId + "' target='blank'><img src='" + thumbnail + "'></a>";
     }); 
     
     $('#search-results').html(html);
