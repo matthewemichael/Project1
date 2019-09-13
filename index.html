@@ -20,71 +20,75 @@
     <title>Project 1</title>
 </head>
 
-<body>
-    <div class="jumbotron jumbotron-fluid">
-        <div class="container">
-          <h1 class="display-4">Fluid jumbotron</h1>
-          <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
-        </div>
-      </div>   
-      <form class="form-inline">
-        <div class="form-group mb-2">
-          <label for="staticEmail2" class="sr-only">Email</label>
-          <input type="text" readonly class="form-control-plaintext" id="staticEmail2" value="email@example.com">
-        </div>
-        <div class="form-group mx-sm-3 mb-2">
-          <label for="inputPassword2" class="sr-only">Password</label>
-          <input type="password" class="form-control" id="inputPassword2" placeholder="Password">
-        </div>
-        <button type="submit" class="btn btn-primary mb-2">Confirm identity</button>
-      </form>
-<div>this is where maps go</div>
-<html>
-  <head>
-    <style>
-       /* Set the size of the div element that contains the map */
-      #map {
-        height: 400px;  /* The height is 400 pixels */
-        width: 100%;  /* The width is the width of the web page */
-       }
-    </style>
-  </head>
-  <body>
-    <h3>My Google Maps Demo</h3>
-    <!--The div element for the map -->
-    <div id="map"></div>
-    <script>
-// Initialize and add the map
-function initMap() {
-  // The location of Uluru
-  var uluru = {lat: -25.344, lng: 131.036};
-  // The map, centered at Uluru
-  var map = new google.maps.Map(
-      document.getElementById('map'), {zoom: 4, center: uluru});
-  // The marker, positioned at Uluru
-  var marker = new google.maps.Marker({position: uluru, map: map});
-}
-    </script>
-    <!--Load the API from the specified URL
-    * The async attribute allows the browser to render the page while the API loads
-    * The key parameter will contain your own API key (which is not needed for this tutorial)
-    * The callback parameter executes the initMap() function
-    -->
-    <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCvm25unjAOnBuZOkzfMIP-B5w8Oxq3MJ4&callback=initMap">
-    </script>
-<div>this is where videos go
-  <form id="search-term">
-  Entry:
-  <br>
-  <input id="query" type="text">
-  <br>
-  <input type="submit" value="Submit">
-  </form>
-</div>  
-<div id="search-results">
-</div>
+    <body>
 
+    <div class = "container">  
+        <!-- Header -->
+        <div class="row">
+            <div class="col-md-12">
+                <div class="jumbotron jumbotron-fluid">
+                    <div class="container">
+                        <h1 class="display-4">Travel Inspiration</h1>
+                        <p class="lead">Make the best out of your next trip!</p>
+                    </div>
+                </div>  
+            </div>
+        </div>
+       
+        
+        <!-- Input for travel location and submit button -->
+        <div class="row">
+            <div class="col-md-12">
+                <form class="form-inline">
+                    <div class="form-group mb-2">
+                        <label for="staticEmail2" class="sr-only">Email</label>
+                        <input type="text" readonly class="form-control-plaintext" id="staticEmail2" value="Enter Your Destination">
+                    </div>
+                    <div class="form-group mx-sm-3 mb-2">
+                        <label for="inputPassword2" class="sr-only">Password</label>
+                        <input type="password" class="form-control" id="inputPassword2" placeholder="City, State, Country">
+                    </div>
+                    <button type="submit" class="btn btn-primary mb-2">Search</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- The map display -->
+        <div class="row">
+            <div class="col-md-8">
+
+            </div>
+        </div>
+
+        <!-- The to-do list -->
+        <div class="container">
+            <!-- Input for to-do list with submit button -->
+            <div class="row">
+                <div class="col-md-4">
+                    
+                </div>
+            </div>
+            <!-- Where input is displayed with check boxes -->
+            <div class="row">
+
+            </div>
+
+            <!-- YouTube videos -->
+            <div class="row">
+                <div class="col-md-12">
+                    
+    
+                </div>
+            </div>
+        </div>
+        
+
+          
+          
+
+
+    </div>
+    
 
 <script src="./assets/javascript/app.js"></script>
 </body>
