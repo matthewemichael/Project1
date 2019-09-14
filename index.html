@@ -36,15 +36,24 @@
                         <span class="mr-3 font-weight-bold">Enter Your Destination</span>
                         <input type="text" id="query" placeholder="City, State, Country" class="mr-1">
                         <input type="submit" class="submit btn btn-primary" value="Search">
+                        
                     </form>
                 </div>
             </div>
         </div>
-
+        <div class="row">
+                <div class="col-md-12" id="weather">
+                        <div class="city"></div>
+                        <div class="wind"></div>
+                        <div class="humidity"></div>
+                        <div class="temp"></div>
+                </div>
+        </div>
         <div class="row" id="map-todo">
             <div class="col-md-8" id="map">
                 <img src="assets/images/map-placeholder.jpg">
             </div>
+            
             <div class="col-md-4" id="todo">
                     <div class="row">
                         <div class="col-md-12">
@@ -59,83 +68,25 @@
                     </div>
             </div>
         </div>
-<<<<<<< HEAD
-      </div>  
-      
-     <img scr="https://maps.google.com/?q=nashville" >
-      <form class="form-inline">
-        <div class="form-group mb-2">
-          <label for="staticEmail2" class="sr-only">Email</label>
-          <input type="text" readonly class="form-control-plaintext" id="staticEmail2" value="email@example.com">
-=======
  
         <!-- YouTube videos -->
         <div class="row">
             <div class ="col-md-12 mt-3" id="player">
                     
             </div>
->>>>>>> b59f78a744bae286540374717068b1cf4835cff5
         </div>
         <div class="row" id="search-results">
             <div class="col-md-12">
             </div>  
             
         </div>
-<<<<<<< HEAD
-        <button type="submit" class="btn btn-primary mb-2">Confirm identity</button>
-      </form>
-<div>this is where maps go</div>
 
 
-<html>
-  <head>
-    <style>
-       /* Set the size of the div element that contains the map */
-      #map {
-        height: 400px;  /* The height is 400 pixels */
-        width: 60%;  /* The width is the width of the web page */
-        margin-left: 30px;
-       }
-       
-    </style>
-  </head>
-  <body>
-    <h3>My Google Maps Demo</h3>
-    <!--The div element for the map -->
-    <div id="map"></div>
-    <script>
-// Initialize and add the map
-function initMap() {
-  // The location of Uluru
-  var uluru = {lat: 36.162, lng: -82.1627};
-  // The map, centered at Uluru
-  var map = new google.maps.Map(
-      document.getElementById('map'), {zoom: 4, center: uluru});
-  // The marker, positioned at Uluru
-  var marker = new google.maps.Marker({position: uluru, map: map});
-}
-    </script>
-    <!--Load the API from the specified URL
-    * The async attribute allows the browser to render the page while the API loads
-    * The key parameter will contain your own API key (which is not needed for this tutorial)
-    * The callback parameter executes the initMap() function
-    -->
-    <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCvm25unjAOnBuZOkzfMIP-B5w8Oxq3MJ4&callback=initMap">
-    </script>
-<div>this is where videos go
-  <form id="search-term">
-  Entry:
-  <br>
-  <input id="query" type="text">
-  <br>
-  <input type="submit" value="Submit">
-  </form>
-</div>  
-<div id="search-results">
-</div>
-=======
->>>>>>> b59f78a744bae286540374717068b1cf4835cff5
+
+
+   
+
+
 
     </div>
     
