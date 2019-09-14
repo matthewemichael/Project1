@@ -1,4 +1,19 @@
-.search-form {
+
+.search-form,
+#search-results 
+{
     background: #c3c3c3;
-    max-width: 1200px;
+    max-width: 1200px !important;
+    margin: 0 auto;
+    border-radius: 5px;
+}
+
+.jumbotron {
+    text-align: center;
+}    
+
+#player {
+    justify-content: center;
+    text-align: center;
+    margin: 0 auto;
 }
