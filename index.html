@@ -26,7 +26,9 @@
           <h1 class="display-4">Fluid jumbotron</h1>
           <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
         </div>
-      </div>   
+      </div>  
+      
+     <img scr="https://maps.google.com/?q=nashville" >
       <form class="form-inline">
         <div class="form-group mb-2">
           <label for="staticEmail2" class="sr-only">Email</label>
@@ -39,14 +41,18 @@
         <button type="submit" class="btn btn-primary mb-2">Confirm identity</button>
       </form>
 <div>this is where maps go</div>
+
+
 <html>
   <head>
     <style>
        /* Set the size of the div element that contains the map */
       #map {
         height: 400px;  /* The height is 400 pixels */
-        width: 100%;  /* The width is the width of the web page */
+        width: 60%;  /* The width is the width of the web page */
+        margin-left: 30px;
        }
+       
     </style>
   </head>
   <body>
@@ -57,7 +63,7 @@
 // Initialize and add the map
 function initMap() {
   // The location of Uluru
-  var uluru = {lat: -25.344, lng: 131.036};
+  var uluru = {lat: 36.162, lng: -82.1627};
   // The map, centered at Uluru
   var map = new google.maps.Map(
       document.getElementById('map'), {zoom: 4, center: uluru});
