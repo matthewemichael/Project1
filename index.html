@@ -20,12 +20,46 @@
     <title>Project 1</title>
 </head>
 
-<body>
-    <div class="jumbotron jumbotron-fluid">
-        <div class="container">
-          <h1 class="display-4">Fluid jumbotron</h1>
-          <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+    <body>
+
+    <div class = "container">  
+        <!-- Header -->
+        <div class="jumbotron">
+            <h1 class="display-4">Travel Inspiration</h1>
+            <p class="lead">Make the best out of your next trip!</p>
+        </div>  
+            
+        <!-- Input for travel location and submit button -->
+        <div class="row search-form">
+                <div class="col-md-12">
+                    <form class="form-inline mb-2" id="search-term">
+                        <span class="mr-3 font-weight-bold">Enter Your Destination</span>
+                        <input type="text" id="query" placeholder="City, State, Country" class="mr-1">
+                        <input type="submit" class="submit btn btn-primary" value="Search">
+                    </form>
+                </div>
+            </div>
         </div>
+
+        <div class="row" id="map-todo">
+            <div class="col-md-8" id="map">
+                <img src="assets/images/map-placeholder.jpg">
+            </div>
+            <div class="col-md-4" id="todo">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <form>
+                                <span id="list-item">To Do Item: <input id="list" type="text" >
+                                    <input id="add-list-item" value="Add Item" type="submit"></span>
+                            </form> 
+                        </div>
+                        <!-- Where input is displayed with check boxes -->
+                        <div class="col-md-12" id="to-dos-listed">
+                        </div>
+                    </div>
+            </div>
+        </div>
+<<<<<<< HEAD
       </div>  
       
      <img scr="https://maps.google.com/?q=nashville" >
@@ -33,11 +67,21 @@
         <div class="form-group mb-2">
           <label for="staticEmail2" class="sr-only">Email</label>
           <input type="text" readonly class="form-control-plaintext" id="staticEmail2" value="email@example.com">
+=======
+ 
+        <!-- YouTube videos -->
+        <div class="row">
+            <div class ="col-md-12 mt-3" id="player">
+                    
+            </div>
+>>>>>>> b59f78a744bae286540374717068b1cf4835cff5
         </div>
-        <div class="form-group mx-sm-3 mb-2">
-          <label for="inputPassword2" class="sr-only">Password</label>
-          <input type="password" class="form-control" id="inputPassword2" placeholder="Password">
+        <div class="row" id="search-results">
+            <div class="col-md-12">
+            </div>  
+            
         </div>
+<<<<<<< HEAD
         <button type="submit" class="btn btn-primary mb-2">Confirm identity</button>
       </form>
 <div>this is where maps go</div>
@@ -90,8 +134,12 @@ function initMap() {
 </div>  
 <div id="search-results">
 </div>
+=======
+>>>>>>> b59f78a744bae286540374717068b1cf4835cff5
 
+    </div>
+    
 
-<script src="./assets/javascript/app.js"></script>
+    <script src="./assets/javascript/app.js"></script>
 </body>
 </html>
