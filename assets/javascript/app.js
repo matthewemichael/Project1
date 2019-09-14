@@ -3,7 +3,9 @@ $(document).ready(function () {
         event.preventDefault();
         var searchTerm = $('#query').val();
         getRequest(searchTerm);
+        onWeather(searchTerm);
     });
+
 });
 
 function getRequest(searchTerm) {
@@ -126,13 +128,14 @@ if (!Array.isArray(list)) {
 // Render our todos when page loads
 renderTodos(list);
 
-
+function onWeather(){
+    var searchWeather = $('#query').val();
 // this is where weather App Ajax call goes
     var APIKey = "bf0e222c472584b5d4726ba1c728ad06";
     
     // Here we are building the URL we need to query the database
     var queryURL = "https://api.openweathermap.org/data/2.5/weather?" +
-      "q=nashville,Burundi&units=imperial&appid=" + APIKey;
+      "q="+searchWeather+",Burundi&units=imperial&appid=" + APIKey;
 
     // Here we run our AJAX call to the OpenWeatherMap API
     $.ajax({
@@ -159,3 +162,4 @@ renderTodos(list);
         console.log("Humidity: " + response.main.humidity);
         console.log("Temperature (F): " + response.main.temp);
       });
+    };
