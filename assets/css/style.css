@@ -1,7 +1,8 @@
 
 .search-form,
 #search-results,
-#map-todo
+#map-todo,
+#weather
 {
     background: #c3c3c3;
     max-width: 1110px !important;
@@ -48,6 +49,9 @@
 
 #todo,
 #map {
+    margin-top: 5px;
+}
+#weather {
     margin-top: 5px;
 }
 
