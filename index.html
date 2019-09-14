@@ -24,22 +24,15 @@
 
     <div class = "container">  
         <!-- Header -->
-        <div class="row">
-            <div class="col-md-12">
-                <div class="jumbotron">
-                    <div class="container">
-                        <h1 class="display-4">Travel Inspiration</h1>
-                        <p class="lead">Make the best out of your next trip!</p>
-                    </div>
-                </div>  
-            </div>
-        </div>
-       
-        
+        <div class="jumbotron">
+            <h1 class="display-4">Travel Inspiration</h1>
+            <p class="lead">Make the best out of your next trip!</p>
+        </div>  
+            
         <!-- Input for travel location and submit button -->
         <div class="row search-form">
                 <div class="col-md-12">
-                    <form class="form-inline mt-2 mb-2" id="search-term">
+                    <form class="form-inline mb-2" id="search-term">
                         <span class="mr-3 font-weight-bold">Enter Your Destination</span>
                         <input type="text" id="query" placeholder="City, State, Country" class="mr-1">
                         <input type="submit" class="submit btn btn-primary" value="Search">
@@ -47,44 +40,29 @@
                 </div>
             </div>
         </div>
-        
 
-        <!-- The map display -->
+        <div class="row" id="map-todo">
+            <div class="col-md-8" id="map">
+                <img src="assets/images/map-placeholder.jpg">
+            </div>
+            <div class="col-md-4" id="todo">
+                <img src="assets/images/todo-placeholder.jpg">
+            </div>
+        </div>
+
+        
+ 
+        <!-- YouTube videos -->
         <div class="row">
-            <div class="col-md-8">
-
+            <div class ="col-md-12 mt-3" id="player">
+                    
             </div>
         </div>
-
-        <!-- The to-do list -->
-        <div class="container">
-            <!-- Input for to-do list with submit button -->
-            <div class="row">
-                <div class="col-md-4">
-                    
-                </div>
-            </div>
-            <!-- Where input is displayed with check boxes -->
-            <div class="row">
-
-            </div>
-
-            <!-- YouTube videos -->
-            <div class="row">
-                <div class ="col-md-12 mt-3" id="player">
-                    
-                </div>
-                <div class="col-md-12" id="search-results">
-                    
-    
-                </div>
-            </div>
+        <div class="row" id="search-results">
+            <div class="col-md-12">
+            </div>  
+            
         </div>
-        
-
-          
-          
-
 
     </div>
     

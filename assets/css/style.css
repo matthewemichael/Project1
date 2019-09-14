@@ -1,4 +1,53 @@
-.search-form {
+
+.search-form,
+#search-results,
+#map-todo
+{
     background: #c3c3c3;
-    max-width: 1200px;
+    max-width: 1110px !important;
+    margin: 0 auto;
+    border-radius: 5px;
 }
+
+#map-todo {
+    margin-top: 10px;
+}
+.jumbotron {
+    text-align: center;
+    margin-bottom: 10px !important;
+}    
+
+#player {
+    justify-content: center;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.vidThumb {
+    display: inline-block;
+    position: relative;
+}
+
+.play-video {
+    position: absolute;
+    float: left;
+    padding: 3px;
+    top: 50px;
+    left: 5px;
+    cursor: pointer;
+    font-weight: bolder;
+    color: white;
+}
+
+#search-results {
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+
+}
+
+#todo,
+#map {
+    margin-top: 5px;
+}
+
