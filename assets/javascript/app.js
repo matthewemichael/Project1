@@ -27,16 +27,13 @@ function showResults(results) {
         var thumbnail = value.snippet.thumbnails.default.url;
         var vidId = value.id.videoId
 
-        html += "<p>" + title + "</p>";
+        html += "<div class='vidThumb'>";
         html += "<img src=" + thumbnail + ">";
-        html += '<button class="play-video" data-url="http://www.youtube.com/embed/'+vidId+'?autoplay=1" onclick="playVideo(this)">Play Video</button>';
+        html += '<span class="play-video" data-url="http://www.youtube.com/embed/'+vidId+'?autoplay=1" onclick="playVideo(this)">Play Video</span></div>';
     }); 
     
     $('#search-results').html(html);
 }
-
-
-
 
 //play video
 function playVideo(element){
