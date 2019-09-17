@@ -1,31 +1,38 @@
+searchTerm = $('#query').val();
+        getRequest(searchTerm);
+        onWeather(searchTerm);
+        
 $(document).ready(function () {
     $('#search-term').submit(function (event) {
         event.preventDefault();
-        var searchTerm = $('#query').val();
+        searchTerm = $('#query').val();
         getRequest(searchTerm);
         onWeather(searchTerm);
+        moveMapToBerlin(map);
+
     });
 
 });
-
+var coordss = "";
 function getRequest(searchTerm) {
     var url = 'https://www.googleapis.com/youtube/v3/search';
     var params = {
         part: 'snippet',
-       
+
         key: 'AIzaSyAMACXViqRIg-JUBahLgXauOQBkBKM63Ik',
         q: searchTerm + "travel"
-        
+
     };
-  
+
     $.getJSON(url, params, showResults);
 }
-
+var latCords = 36.16;
+var lonCords = -86.77;
 function showResults(results) {
     var html = "";
     var entries = results.items;
     console.log(results)
-    
+
     $.each(entries, function (index, value) {
         var title = value.snippet.title;
         var thumbnail = value.snippet.thumbnails.default.url;
@@ -33,19 +40,19 @@ function showResults(results) {
 
         html += "<div class='vidThumb'>";
         html += "<img src=" + thumbnail + ">";
-        html += '<span class="play-video" data-url="http://www.youtube.com/embed/'+vidId+'?autoplay=1" onclick="playVideo(this)">Play Video</span></div>';
-    }); 
-    
+        html += '<span class="play-video" data-url="http://www.youtube.com/embed/' + vidId + '?autoplay=1" onclick="playVideo(this)">Play Video</span></div>';
+    });
+
     $('#search-results').html(html);
 }
 
 
 
 //play video
-function playVideo(element){
+function playVideo(element) {
     var vidurl = $(element).data('url');
     console.log(vidurl);
-    $("#player").html('<iframe type="text/html" width="640" height="390" src="'+vidurl+'" frameborder="0"></iframe>');
+    $("#player").html('<iframe type="text/html" width="640" height="390" src="' + vidurl + '" frameborder="0"></iframe>');
 }
 
 // __________________________________________________________________
@@ -53,9 +60,9 @@ function playVideo(element){
 // Makes the to-do list 
 
 function renderTodos(list) {
-    
+
     // empties out the html
-    $("#to-dos-listed").empty(); 
+    $("#to-dos-listed").empty();
 
     // render our todos to the page
     for (var i = 0; i < list.length; i++) {
@@ -79,9 +86,9 @@ function renderTodos(list) {
         // Add the button and to do item to the to-dos div
         $("#to-dos-listed").append(toDoItem);
     }
-  }
+}
 
-$("#add-list-item").on("click", function(event) {
+$("#add-list-item").on("click", function (event) {
     event.preventDefault();
 
     // Get the to-do "value" from the textbox and store it as a variable
@@ -100,7 +107,7 @@ $("#add-list-item").on("click", function(event) {
 });
 
 // When a user clicks a check box then delete teh data
-$(document).on("click", ".checkbox", function() {
+$(document).on("click", ".checkbox", function () {
 
     // Get the number of the button from its data attribute and hold in a variable called toDoNumber.
     var toDoNumber = $(this).attr("data-to-do");
@@ -128,38 +135,85 @@ if (!Array.isArray(list)) {
 // Render our todos when page loads
 renderTodos(list);
 
-function onWeather(){
+function onWeather() {
     var searchWeather = $('#query').val();
-// this is where weather App Ajax call goes
+    // this is where weather App Ajax call goes
     var APIKey = "bf0e222c472584b5d4726ba1c728ad06";
-    
+
     // Here we are building the URL we need to query the database
     var queryURL = "https://api.openweathermap.org/data/2.5/weather?" +
-      "q="+searchWeather+",Burundi&units=imperial&appid=" + APIKey;
+        "q=" + searchWeather + ",Burundi&units=imperial&appid=" + APIKey;
 
     // Here we run our AJAX call to the OpenWeatherMap API
     $.ajax({
-      url: queryURL,
-      method: "GET"
+        url: queryURL,
+        method: "GET"
     })
-      // We store all of the retrieved data inside of an object called "response"
-      .then(function(response) {
+        // We store all of the retrieved data inside of an object called "response"
+        .then(function (response) {
 
-        // Log the queryURL
-        console.log(queryURL);
+            // Log the queryURL
+            console.log(queryURL);
 
-        // Log the resulting object
-        console.log(response);
+            // Log the resulting object
 
-        // Transfer content to HTML
-        $(".city").html("<h1>" + response.name + " Weather Details</h1>");
-        $(".wind").text("Wind Speed: " + response.wind.speed);
-        $(".humidity").text("Humidity: " + response.main.humidity);
-        $(".temp").text("Temperature (F) " + response.main.temp);
+            console.log(response);
+            // this section is where we store longitue and latitude in varaibles from the weather app so we can use in the maps app
+            var lonCords = response.coord.lon;
+            var latCords = response.coord.lat;
 
-        // Log the data in the console as well
-        console.log("Wind Speed: " + response.wind.speed);
-        console.log("Humidity: " + response.main.humidity);
-        console.log("Temperature (F): " + response.main.temp);
-      });
-    };
+            // Transfer content to HTML
+            $(".city").html("<h1>" + response.name + " Weather Details</h1>");
+            $(".wind").text("Wind Speed: " + response.wind.speed);
+            $(".humidity").text("Humidity: " + response.main.humidity);
+            $(".temp").text("Temperature (F) " + response.main.temp);
+
+            // Log the data in the console as well
+            console.log("Wind Speed: " + response.wind.speed);
+            console.log("Humidity: " + response.main.humidity);
+            console.log("Temperature (F): " + response.main.temp);
+            map.setCenter({ lat: latCords, lng: lonCords });
+            // console.log("lat:"+latCords+",lng:"+lonCords);
+        });
+};
+// this is where we store the api Key for the here Maps
+var apikey = '8-jdDwscP_LhVyGQhWuG0z0ZjdUVl-LGrhfeQjIeOzY';
+function moveMapToBerlin(map) {
+    console.log(latCords);
+    map.setCenter({ lat: latCords, lng: lonCords });
+    map.setZoom(14);
+}
+/**
+ * Boilerplate map initialization code starts below:
+ */
+
+//Step 1: initialize communication with the platform
+// In your own code, replace variable window.apikey with your own apikey
+var platform = new H.service.Platform({
+    apikey: window.apikey
+});
+var defaultLayers = platform.createDefaultLayers();
+
+//Step 2: initialize a map - this map is centered over Europe
+var map = new H.Map(document.getElementById('map'),
+    defaultLayers.vector.normal.map, {
+    center: { lat: latCords, lng: lonCords },
+    zoom: 4,
+    pixelRatio: window.devicePixelRatio || 1
+
+});
+// add a resize listener to make sure that the map occupies the whole container
+window.addEventListener('resize', () => map.getViewPort().resize());
+
+//Step 3: make the map interactive
+// MapEvents enables the event system
+// Behavior implements default interactions for pan/zoom (also on mobile touch environments)
+var behavior = new H.mapevents.Behavior(new H.mapevents.MapEvents(map));
+
+// Create the default UI components
+var ui = H.ui.UI.createDefault(map, defaultLayers);
+
+// Now use the map as required...
+window.onload = function () {
+    moveMapToBerlin(map);
+}
