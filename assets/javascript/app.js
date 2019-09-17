@@ -14,20 +14,25 @@ $(document).ready(function () {
 
 });
 var coordss = "";
+var latCords = 36.16;
+var lonCords = -86.77;
+
+//-----------------YouTube---------------//
+// youtube api request
 function getRequest(searchTerm) {
     var url = 'https://www.googleapis.com/youtube/v3/search';
     var params = {
         part: 'snippet',
-
         key: 'AIzaSyAMACXViqRIg-JUBahLgXauOQBkBKM63Ik',
-        q: searchTerm + "travel"
+        q: searchTerm + "travel",
+        maxResults: 10
 
     };
 
     $.getJSON(url, params, showResults);
 }
-var latCords = 36.16;
-var lonCords = -86.77;
+
+// display youtube search results
 function showResults(results) {
     var html = "";
     var entries = results.items;
@@ -46,9 +51,7 @@ function showResults(results) {
     $('#search-results').html(html);
 }
 
-
-
-//play video
+//play youtube video
 function playVideo(element) {
     var vidurl = $(element).data('url');
     console.log(vidurl);
