@@ -94,7 +94,7 @@ function renderTodos(list) {
 
 $("#add-list-item").on("click", function (event) {
     event.preventDefault();
-    if ($('#list').val() == "") {
+    if ($('#list').val().trim() == "") {
         return false;
     } else {
     // Get the to-do "value" from the textbox and store it as a variable
