@@ -1,9 +1,14 @@
+body {
+    font-family: 'GlacialIndifferenceRegular' !important; 
+    font-weight: normal !important; 
+    font-style: normal !important; 
+}
 .search-form,
 #search-results,
 #map-todo,
 #weather
 {
-    background: #c3c3c3;
+    background: #A398A4;
     margin: 0 auto;
     border-radius: 5px;
 }
@@ -16,7 +21,13 @@
     margin-bottom: 5px !important;
     padding-top: 15px !important;
     padding-bottom: 15px !important;
+    background: #463047;
 }    
+
+#brand-logo {
+    max-width: 60%;
+    max-height: 60%;
+}
 
 #player {
     justify-content: center;
@@ -28,6 +39,7 @@
     display: inline-block;
     position: relative;
     margin-right: 5px;
+    left: 160px;
 }
 
 .play-video {

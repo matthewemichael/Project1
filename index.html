@@ -4,7 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-      <!-- Bootstrap -->
+        <!-- Animate CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css"> 
+        <!-- Font Library -->
+        <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/glacial-indifference" type="text/css"/>
+        <!-- Bootstrap -->
       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
       <link rel="stylesheet" type="text/css" href="assets/css/style.css">
       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"></script>
@@ -16,10 +20,7 @@
       <script src="https://www.gstatic.com/firebasejs/6.5.0/firebase-database.js"></script>
       <title>Map at a specified location</title>
       <link rel="stylesheet" type="text/css" href="https://js.api.here.com/v3/3.1/mapsjs-ui.css" />
-     
     
-      
-        
       <script type="text/javascript" src="https://js.api.here.com/v3/3.1/mapsjs-core.js"></script>
       <script type="text/javascript" src="https://js.api.here.com/v3/3.1/mapsjs-service.js"></script>
       <script type="text/javascript" src="https://js.api.here.com/v3/3.1/mapsjs-ui.js"></script>
@@ -36,7 +37,7 @@
     <div class = "container">  
         <!-- Header -->
         <div class="jumbotron">
-            <h1 class="display-4">Travel Inspiration</h1>
+            <img src="assets/images/travelhublogo.png" id="brand-logo"><br>
             <p class="lead">Make the best out of your next trip!</p>
         </div>  
             
@@ -64,7 +65,7 @@
             <div class="col-md-3"></div>
         </div>
         <div class="row" id="map-todo">
-            <div class="col-md-8" id="map">
+            <div class="col-lg-8" id="map">
                  
                         <!--<div id="markers-on-the-map">
                                 <div class="page-header"> -->
@@ -74,7 +75,7 @@
                <!-- <img src=""> -->
             </div>
             
-            <div class="col-md-4" id="todo">
+            <div class="col-lg-4" id="todo">
                     <div class="row">
                         <div class="col-md-12">
                             <form>
@@ -101,10 +102,6 @@
             
         </div>
 
-
-
-
-   
 
 
 
