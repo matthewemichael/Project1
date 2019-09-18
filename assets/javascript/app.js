@@ -1,12 +1,12 @@
 searchTerm = $('#query').val();
-        // getRequest(searchTerm);
+        //getRequest(searchTerm);
         onWeather(searchTerm);
         
 $(document).ready(function () {
     $('#search-term').submit(function (event) {
         event.preventDefault();
         searchTerm = $('#query').val();
-        getRequest(searchTerm);
+        //getRequest(searchTerm);
         onWeather(searchTerm);
         moveMapToBerlin(map);
 
@@ -72,9 +72,10 @@ function renderTodos(list) {
         // Var holds "<p>" tag 
         var toDoItem = $("<p>");
 
+        toDoItem.append()
         // List is in text form  
         toDoItem.text(list[i]);
-
+        
         // Creates the button
         var closeButton = $("<button>");
 
@@ -93,10 +94,12 @@ function renderTodos(list) {
 
 $("#add-list-item").on("click", function (event) {
     event.preventDefault();
-
+    if ($('#list').val() == "") {
+        return false;
+    } else {
     // Get the to-do "value" from the textbox and store it as a variable
     var toDoIdea = $("#list").val().trim();
-
+        console.log(toDoIdea);
 
     list.push(toDoIdea);
 
@@ -107,7 +110,7 @@ $("#add-list-item").on("click", function (event) {
 
     // Clear the textbox when user has submitted their data
     $("#list").val("");
-});
+}});
 
 // When a user clicks a check box then delete teh data
 $(document).on("click", ".checkbox", function () {
