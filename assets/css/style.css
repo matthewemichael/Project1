@@ -29,6 +29,12 @@ body {
     max-height: 60%;
 }
 
+.heartBeat {
+    animation-duration: 3s;
+    animation-delay: 2s;
+    animation-iteration-count: 2;
+}
+
 #player {
     justify-content: center;
     text-align: center;
