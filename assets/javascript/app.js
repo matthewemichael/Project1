@@ -165,6 +165,21 @@ function onWeather() {
             var lonCords = response.coord.lon;
             var latCords = response.coord.lat;
 
+var iconcode=response.weather[0].icon;
+// console.log(weathericon);
+// var weatherurl="http://openweathermap.org/img/wn/" +weathericon+ ".png"
+// console.log(weatherurl);
+// weathericonurlname= $("<img>");
+// $(".iconic")attr("src", weatherurl);
+// var iconcode = a.weather[0].icon;
+// After it you should concatenate this var iconcode with the url that contains the icons, like:
+
+        var iconurl = "http://openweathermap.org/img/w/" + iconcode + ".png";
+// Finally just change src attribute in the DOM by doing this:
+
+        $('#wicon').attr('src', iconurl);
+
+
             // Transfer content to HTML
             $(".city").html("<h1>" + response.name + " Weather Details</h1>");
             $(".wind").text("Wind Speed: " + response.wind.speed);
