@@ -77,7 +77,7 @@ function renderTodos(list) {
     // render our todos to the page
     for (var i = 0; i < list.length; i++) {
         // Var holds "<p>" tag 
-        var toDoItem = $("<p>");
+        var toDoItem = $("<h4>");
 
         toDoItem.append()
         // List is in text form  
@@ -191,13 +191,13 @@ var iconcode=response.weather[0].icon;
 
 
             // Transfer content to HTML
-            $(".city").html("<h4>" + response.name + " Weather Details</h4>");
+            $(".city").html("<h4>" + response.name + "</h4>");
             $(".wind").text("Wind Speed: " + response.wind.speed);
             $(".humidity").text("Humidity: " + response.main.humidity);
-            $(".temp").text("Temperature (F) " + response.main.temp);
+            $(".temp").text("Temp: " + response.main.temp);
 
             // Log the data in the console as well
-            console.log("Wind Speed: " + response.wind.speed);
+            console.log("Wind: " + response.wind.speed);
             console.log("Humidity: " + response.main.humidity);
             console.log("Temperature (F): " + response.main.temp);
             map.setCenter({ lat: latCords, lng: lonCords });
