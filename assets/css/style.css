@@ -12,10 +12,18 @@ body {
     background: #A398A4;
     margin: 0 auto;
     border-radius: 5px;
-    
+    text-align: center;
 }
 
-
+#search {
+    justify-content: center;
+    text-align: center;
+}
+#search-term {
+    text-align: center;
+    margin: 0 auto;
+    justify-content: center;
+}
 #map-todo {
     margin-top: 5px;
 }
@@ -36,6 +44,7 @@ body {
     animation-duration: 3s;
     animation-delay: 2s;
     animation-iteration-count: 2;
+    margin-top: 5px;
 }
 
 #player {
@@ -87,6 +96,11 @@ div.row {
     width: 95%;
     height: 450px;
     background: grey;
+}
+
+#to-dos-listed {
+    justify-content: left;
+    text-align: left;
 }
 
 #panel {
@@ -261,9 +275,7 @@ body{
 b,strong{
     color:#0f1621;
 }
-h2,h3,h4{
-    margin-top:2.5em;
-}
+
 h1{
     margin-top:10px;
     font-size:22px;
@@ -276,7 +288,11 @@ h2{
 }
 h3,h4{
     font-size:16px;
-    line-height:24px;
+    font-weight: bolder;
+}
+
+h4 {
+    margin-bottom: 0;
 }
 .panel{
     background-color:transparent

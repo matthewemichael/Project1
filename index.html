@@ -45,31 +45,36 @@
             
         <!-- Input for travel location and submit button -->
         <div class="row search-form">
-            <div class="col-md-12">
-                <form class="form-inline mb-2" id="search-term">
-                    <span class="mr-3 font-weight-bold animated heartBeat">Enter Your Destination</span>
-                    <input type="text" id="query" placeholder="City, State, Country" class="mr-1" value="Nashville">
-                    <input type="submit" class="submit btn btn-primary" value="Search">
-                    
-                </form>
+            <div class="col-md-6">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h4 class="mr-3 font-weight-bold animated heartBeat">Enter Your Destination</h4>
+                   </div> 
+                   <div class="col-md-12">
+                        <form class="form-inline mb-2" id="search-term">
+                            <input type="text" id="query" placeholder="City, State, Country" class="mr-1" value="Nashville">
+                            <input type="submit" class="submit btn btn-primary" value="Search">
+                        </form>
+                    </div>
+                </div>
             </div>
+            <div class="col-md-6">
+                <div class="row" id="weather">
+                    <div class="col-md-9">
+                        <div class="city"></div>
+                        <div class="temp"></div>
+                        <div class="humidity"></div>
+                        <div class="wind"></div>  
+                    </div>
+                    <div class="col-md-3">     
+                        <div id="icon"><img id="wicon" src="" alt="Weather icon"></div>
+                    </div>
+                
+                </div>
+            </div>
+
         </div>
         
-        <div class="row" id="weather">
-                <div class="col-md-3"></div>
-                <div class="col-md-3"></div>
-            <div class="col-md-3">
-                <div>Weather Currently</div>
-            </div>    
-            <div class="col-md-3">
-                    
-                <span class="temp"></span>
-                <span class="humidity"></span>
-                <span class="wind"></span>   
-                
-            </div>
-            
-        </div>
         <div class="row" id="map-todo">
             <div class="col-lg-8" id="map">
                  
