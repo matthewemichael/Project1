@@ -18,7 +18,7 @@ var latCords = 36.16;
 var lonCords = -86.77;
 
 //-----------------YouTube---------------//
-// //youtube api request
+//youtube api request
 // function getRequest(searchTerm) {
 //     var url = 'https://www.googleapis.com/youtube/v3/search';
 //     var params = {
@@ -45,7 +45,7 @@ var lonCords = -86.77;
 
 //         html += "<div class='vidThumb'>";
 //         html += "<img src=" + thumbnail + ">";
-//         html += '<span class="play-video" data-url="http://www.youtube.com/embed/' + vidId + '?autoplay=1" onclick="playVideo(this)">Play Video</span></div>';
+//         html += '<span class="play-video animated " data-url="http://www.youtube.com/embed/' + vidId + '?autoplay=1" onclick="playVideo(this)">Play Video</span></div>';
 //     });
 
 //     $('#search-results').html(html);
@@ -56,7 +56,14 @@ var lonCords = -86.77;
 //     var vidurl = $(element).data('url');
 //     console.log(vidurl);
 //     $("#player").html('<iframe type="text/html" width="640" height="390" src="' + vidurl + '" frameborder="0"></iframe>');
+//     $("#player").prepend('<p><button class="btn btn-primary close-video">Close Video</button></p>');
 // }
+
+// function clearContent() {
+//     $("#player").empty();
+// }
+
+// $(document).on("click", ".close-video", clearContent)
 
 // __________________________________________________________________
 

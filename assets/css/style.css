@@ -2,7 +2,8 @@ body {
     font-family: 'GlacialIndifferenceRegular' !important; 
     font-weight: normal !important; 
     font-style: normal !important; 
-    background-color: black;
+    background: black !important;
+
 }
 .search-form,
 #search-results,
@@ -14,7 +15,9 @@ body {
     border-radius: 5px;
     text-align: center;
 }
-
+.lead {
+    color: white;
+}
 #search {
     justify-content: center;
     text-align: center;
@@ -40,9 +43,15 @@ body {
     max-height: 60%;
 }
 
+.zoomIn {
+    animation-duration: 3s;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+}
+
 .heartBeat {
     animation-duration: 3s;
-    animation-delay: 2s;
+    animation-delay: 3s;
     animation-iteration-count: 2;
     margin-top: 5px;
 }
@@ -64,19 +73,25 @@ body {
     position: absolute;
     float: left;
     padding: 3px;
-    top: 50px;
+    top: 30px;
     left: 5px;
     cursor: pointer;
     font-weight: bolder;
-    color: white;
+    font-size: 24px;
+    color: rgb(220, 177, 248);
+    text-shadow:
+        -1px -1px 0 #ffffff,
+        1px -1px 0 #ffffff,
+        -1px 1px 0 #ffffff,
+        1px 1px 0 #ffffff;
 }
 
 #search-results {
-    margin: 0 auto !important;
+    margin:  auto !important;
     display: flex;
     justify-content: space-around;
     overflow: scroll;
-    padding: 0;
+    padding: 5px 0px 5px 0px;
     text-align: center;
 }
 
@@ -84,9 +99,13 @@ div.row {
     margin: 0;
 }
 
-#todo,
+#todo {
+    margin-top: 5px;
+}
+
 #map {
     margin-top: 5px;
+    margin-bottom: 5px;
 }
 
 #weather {
@@ -193,12 +212,15 @@ label.param-label{
 }
 @media (min-width: 1200px){
     .sel-md-10{
-        max-width:250px;
+        max-width:250px;    
+    }
+    .vidThumb {
+        left: 60px;
     }
 }
-.container{
-    background-color: black;
-}
+
+
+
 /*.container{
     -webkit-font-smoothing:antialiased;
     -moz-osx-font-smoothing:grayscale;
