@@ -2,6 +2,7 @@ body {
     font-family: 'GlacialIndifferenceRegular' !important; 
     font-weight: normal !important; 
     font-style: normal !important; 
+    background: black !important;
 }
 .search-form,
 #search-results,
@@ -13,7 +14,9 @@ body {
     border-radius: 5px;
     text-align: center;
 }
-
+.lead {
+    color: white;
+}
 #search {
     justify-content: center;
     text-align: center;
@@ -63,19 +66,25 @@ body {
     position: absolute;
     float: left;
     padding: 3px;
-    top: 50px;
+    top: 30px;
     left: 5px;
     cursor: pointer;
     font-weight: bolder;
-    color: white;
+    font-size: 24px;
+    color: rgb(220, 177, 248);
+    text-shadow:
+        -1px -1px 0 #ffffff,
+        1px -1px 0 #ffffff,
+        -1px 1px 0 #ffffff,
+        1px 1px 0 #ffffff;
 }
 
 #search-results {
-    margin: 0 auto !important;
+    margin:  auto !important;
     display: flex;
     justify-content: space-around;
     overflow: scroll;
-    padding: 0;
+    padding: 5px 0px 5px 0px;
     text-align: center;
 }
 
