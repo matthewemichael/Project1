@@ -42,9 +42,15 @@ body {
     max-height: 60%;
 }
 
+.zoomIn {
+    animation-duration: 3s;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+}
+
 .heartBeat {
     animation-duration: 3s;
-    animation-delay: 2s;
+    animation-delay: 3s;
     animation-iteration-count: 2;
     margin-top: 5px;
 }
@@ -92,9 +98,13 @@ div.row {
     margin: 0;
 }
 
-#todo,
+#todo {
+    margin-top: 5px;
+}
+
 #map {
     margin-top: 5px;
+    margin-bottom: 5px;
 }
 
 #weather {
@@ -201,9 +211,13 @@ label.param-label{
 }
 @media (min-width: 1200px){
     .sel-md-10{
-        max-width:250px;
+        max-width:250px;    
+    }
+    .vidThumb {
+        left: 60px;
     }
 }
+
 
 /*.container{
     -webkit-font-smoothing:antialiased;
