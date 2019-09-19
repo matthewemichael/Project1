@@ -184,10 +184,10 @@ var iconcode=response.weather[0].icon;
 
 
             // Transfer content to HTML
-            $(".city").html("<h1>" + response.name + " Weather Details</h1>");
-            $(".wind").text("Wind Speed: " + response.wind.speed);
-            $(".humidity").text("Humidity: " + response.main.humidity);
-            $(".temp").text("Temperature (F) " + response.main.temp);
+            $(".city").html("<h5>" + response.name + "</h5>");
+            $(".wind").text("     Wind Speed: " + response.wind.speed);
+            $(".humidity").text("      Humidity: " + response.main.humidity);
+            $(".temp").text("     Temp: " + response.main.temp);
 
             // Log the data in the console as well
             console.log("Wind Speed: " + response.wind.speed);

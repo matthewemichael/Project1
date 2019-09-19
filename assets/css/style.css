@@ -2,6 +2,7 @@ body {
     font-family: 'GlacialIndifferenceRegular' !important; 
     font-weight: normal !important; 
     font-style: normal !important; 
+    background-color: black;
 }
 .search-form,
 #search-results,
@@ -11,7 +12,9 @@ body {
     background: #A398A4;
     margin: 0 auto;
     border-radius: 5px;
+    
 }
+
 
 #map-todo {
     margin-top: 5px;
@@ -179,7 +182,9 @@ label.param-label{
         max-width:250px;
     }
 }
-
+.container{
+    background-color: black;
+}
 /*.container{
     -webkit-font-smoothing:antialiased;
     -moz-osx-font-smoothing:grayscale;
@@ -248,7 +253,7 @@ label.param-label{
 }
 body{
     color:#0f1621;
-    background-color:transparent;
+    background-color:black;
     font-size:15px;
     line-height:22px;
 }
@@ -517,10 +522,19 @@ strong{
 body {
     font-family:'Fira Sans', "Lucida Grande",Tahoma,sans-serif;
     color: #0f1621;
-    background-color: transparent;
+    /* background-color: transparent; */
     font-size: 15px;
     line-height: 22px;
 }
 b, strong {
     color: black;
 }
+.lead{
+    color:white;
+}
+h5{
+    color:white
+}
+.mb-2, .my-2 {
+    margin-top: .5rem!important
+    }
