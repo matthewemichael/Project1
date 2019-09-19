@@ -2,6 +2,7 @@ body {
     font-family: 'GlacialIndifferenceRegular' !important; 
     font-weight: normal !important; 
     font-style: normal !important; 
+    background-color: black;
 }
 .search-form,
 #search-results,
@@ -195,7 +196,9 @@ label.param-label{
         max-width:250px;
     }
 }
-
+.container{
+    background-color: black;
+}
 /*.container{
     -webkit-font-smoothing:antialiased;
     -moz-osx-font-smoothing:grayscale;
@@ -264,7 +267,7 @@ label.param-label{
 }
 body{
     color:#0f1621;
-    background-color:transparent;
+    background-color:black;
     font-size:15px;
     line-height:22px;
 }
@@ -290,6 +293,8 @@ h3,h4{
 
 h4 {
     margin-bottom: 0;
+    color:white;
+    font-size: 20px;
 }
 .panel{
     background-color:transparent
@@ -535,10 +540,29 @@ strong{
 body {
     font-family:'Fira Sans', "Lucida Grande",Tahoma,sans-serif;
     color: #0f1621;
-    background-color: transparent;
+    /* background-color: transparent; */
     font-size: 15px;
     line-height: 22px;
 }
 b, strong {
     color: black;
 }
+.lead{
+    color:white;
+}
+h5{
+    color:white
+}
+.mb-2, .my-2 {
+    margin-top: .5rem!important
+    }
+.checkbox {
+        /* position: absolute; */
+        top: 0;
+        left: 0;
+        height: 20px;
+        width: 20px;
+        margin-right: 20px;
+        border-radius: 25%;
+        /* background-color: #eee; */
+      }
