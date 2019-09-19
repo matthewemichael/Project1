@@ -1,12 +1,12 @@
 searchTerm = $('#query').val();
-        //getRequest(searchTerm);
+        // getRequest(searchTerm);
         onWeather(searchTerm);
         
 $(document).ready(function () {
     $('#search-term').submit(function (event) {
         event.preventDefault();
         searchTerm = $('#query').val();
-        //getRequest(searchTerm);
+        // getRequest(searchTerm);
         onWeather(searchTerm);
         moveMapToBerlin(map);
 
@@ -18,7 +18,7 @@ var latCords = 36.16;
 var lonCords = -86.77;
 
 //-----------------YouTube---------------//
-// youtube api request
+// //youtube api request
 // function getRequest(searchTerm) {
 //     var url = 'https://www.googleapis.com/youtube/v3/search';
 //     var params = {
@@ -184,7 +184,7 @@ var iconcode=response.weather[0].icon;
 
 
             // Transfer content to HTML
-            $(".city").html("<h1>" + response.name + " Weather Details</h1>");
+            $(".city").html("<h4>" + response.name + " Weather Details</h4>");
             $(".wind").text("Wind Speed: " + response.wind.speed);
             $(".humidity").text("Humidity: " + response.main.humidity);
             $(".temp").text("Temperature (F) " + response.main.temp);
