@@ -16,8 +16,6 @@ This site provides initial information for users who are planning to travel some
 
 ## First Half of Screen
 ![Screen Shot](assets/images/FirstHalfScreen.png)
-
-## Second Half of Screen When 
 ![Screen Shot](assets/images/SecondHalfScreen.png)
 
 ## Future Goals
