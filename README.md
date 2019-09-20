@@ -2,7 +2,7 @@
 This is the first group project for Vanderbilt's Coding Bootcamp. 
 
 # Link 
-https://jonfinley211.github.io/Project1/
+https://matthewemichael.github.io/Project1/index.html
 
 ## Original Inspiration
 This site provides initial information for users who are planning to travel somewhere new. A to-do list is provided with local storage in order to store ideas and inspiration.
