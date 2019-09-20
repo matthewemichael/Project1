@@ -1,4 +1,4 @@
-# TravelHub
+# TravelHub Project
 This is the first group project for Vanderbilt's Coding Bootcamp. 
 
 # Link 
