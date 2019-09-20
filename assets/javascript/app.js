@@ -45,7 +45,7 @@ function showResults(results) {
 
         html += "<div class='vidThumb'>";
         html += "<img src=" + thumbnail + ">";
-        html += '<span class="play-video animated " data-url="http://www.youtube.com/embed/' + vidId + '?autoplay=1" onclick="playVideo(this)">Play Video</span></div>';
+        html += '<span class="play-video animated " data-url="https://www.youtube.com/embed/' + vidId + '?autoplay=1" onclick="playVideo(this)">Play Video</span></div>';
     });
 
     $('#search-results').html(html);
