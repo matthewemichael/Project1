@@ -14,7 +14,7 @@ This site provides initial information for users who are planning to travel some
 - Bootstrap
 - JSON requests
 
-## First Half of Screen
+## Screen Shot
 ![Screen Shot](assets/images/FirstHalfScreen.png)
 ![Screen Shot](assets/images/SecondHalfScreen.png)
 
