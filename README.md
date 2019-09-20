@@ -15,10 +15,10 @@ This site provides initial information for users who are planning to travel some
 - JSON requests
 
 ## First Half of Screen
-![Screen Shot](images/part1screenshot.png)
+![Screen Shot](assets/images/part1screenshot.png)
 
 ## Second Half of Screen When 
-![Screen Shot](images/part2screenshot.png)
+![Screen Shot](assets/images/part2screenshot.png)
 
 ## Future Goals
 - Making a more interactive list with Google links
