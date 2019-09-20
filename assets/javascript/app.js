@@ -184,7 +184,7 @@ var iconcode=response.weather[0].icon;
 // var iconcode = a.weather[0].icon;
 // After it you should concatenate this var iconcode with the url that contains the icons, like:
 
-        var iconurl = "http://openweathermap.org/img/w/" + iconcode + ".png";
+        var iconurl = "https://openweathermap.org/img/w/" + iconcode + ".png";
 // Finally just change src attribute in the DOM by doing this:
 
         $('#wicon').attr('src', iconurl);
